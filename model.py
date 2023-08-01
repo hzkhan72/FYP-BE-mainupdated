@@ -125,11 +125,7 @@ def nlp_model(v_id):
 
         topic_name = generate_topic_name(original_text)
 
-        return {
-            topic_name,
-            original_text_length,
-            final_summary_length,
-            english_summary,
-            urdu_translated_summary,
-        }
+        result = {"eng_summary": english_summary, "urdu_summary": urdu_translated_summary, "topic": topic_name }
+        
+        return result
 

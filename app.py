@@ -68,14 +68,7 @@ def respond():
         else:
             data["message"] = "Success"
             data["id"] = video_id
-            (
-                data["topic_name"],
-                data["eng_summary"],
-                data["Urdu_summary"],
-                data["original_txt_length"],
-                data["final_summ_length"],
-            ) = nlp_model(video_id)
-
+            data["result"] = nlp_model(video_id)
     body["data"] = data
 
     # Return the response in json format
