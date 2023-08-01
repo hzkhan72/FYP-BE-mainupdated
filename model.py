@@ -124,8 +124,10 @@ def nlp_model(v_id):
         urdu_translated_summary = g_translate(english_summary, "ur")
 
         topic_name = generate_topic_name(original_text)
+        
+        urdu_topic = g_translate(topic_name, "ur")
 
-        result = {"eng_summary": english_summary, "urdu_summary": urdu_translated_summary, "topic": topic_name }
+        result = {"eng_summary": english_summary, "urdu_summary": urdu_translated_summary, "topic": topic_name, "urdu_topic":urdu_topic }
         
         return result
 
